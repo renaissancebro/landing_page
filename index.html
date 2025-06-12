@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AlphaRed - Get Strategic Trade Intelligence Before the Rest</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer data-domain="renaissancebro.github.io" src="https://plausible.io/js/script.js"></script>
+
+  <!-- ✅ Plausible Analytics Script -->
+  <script defer data-domain="renaissancebro.github.io" src="https://plausible.io/js/script.pageview-props.tagged-events.js"></script>
 </head>
 <body>
   <div class="container">
@@ -52,6 +54,7 @@
       });
 
       if (response.ok) {
+        plausible('WaitlistSignup'); // ✅ Custom event tracked here
         form.style.display = "none";
         thankYou.style.display = "block";
       } else {
